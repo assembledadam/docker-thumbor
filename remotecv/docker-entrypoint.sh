@@ -7,7 +7,7 @@ set -e
 [[ -z $LOG_LEVEL ]] && LOG_LEVEL=INFO
 
 if [ "$1" = 'remotecv' ]; then
-    exec remotecv --host $REDIS_HOST --port $REDIS_PORT --database $REDIS_DATABASE -l $LOG_LEVEL
+    exec remotecv --host $REDIS_HOST --port $REDIS_PORT --database $REDIS_DATABASE -l $LOG_LEVEL -o loaders.http_loader
 fi
 
 exec "$@"

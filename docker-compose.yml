@@ -18,7 +18,7 @@ thumbor:
   links:
     - redis:redis
   ports:
-    - "127.0.0.1:8001:80" # thumbor port
+    - "8001:80" # thumbor port
 nginx:
   build: nginx
   links:
@@ -26,7 +26,7 @@ nginx:
   volumes_from:
     - thumbor
   ports:
-    - "127.0.0.1:8000:80" # thumbor port
+    - "8000:80" # thumbor port
   hostname: nginx
 remotecv:
   build: remotecv
