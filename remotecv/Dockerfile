@@ -27,6 +27,8 @@ RUN \
     ln /usr/lib/python2.7/dist-packages/cv.py /usr/local/lib/python2.7/cv.py
 
 COPY docker-entrypoint.sh /
-COPY loaders /
+COPY remotecv_loaders /remotecv_loaders
+RUN cd /remotecv_loaders && python setup.py install
+
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["remotecv"]
