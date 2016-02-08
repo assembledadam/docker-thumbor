@@ -6,3 +6,5 @@ logs
 *.egg*
 remotecv/remotecv_loaders/build
 remotecv/remotecv_loaders/dist
+docker-compose-aws-s3-storage-test.yml
+docker-compose-aws-s3-loader-test.yml
